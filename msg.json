@@ -1,0 +1,804 @@
+{
+  "nested": {
+    "message": {
+      "options": {
+        "go_package": "../message;message"
+      },
+      "nested": {
+        "Message": {
+          "oneofs": {
+            "Body": {
+              "oneof": [
+                "heartMsg",
+                "loginMsg",
+                "logoutMsg",
+                "receiptMsg",
+                "orderReceiptMsg",
+                "retractMsg",
+                "roomMember",
+                "room",
+                "imMsg",
+                "pluginMsg",
+                "orderMsg",
+                "orderSaveMsg",
+                "orderCommand",
+                "relayMsg",
+                "roomMsg",
+                "authTokenMsg",
+                "authStatusMsg",
+                "systemMsg",
+                "appMsg",
+                "resultMsg",
+                "ackMsg",
+                "transMsg",
+                "stateMsg",
+                "modifyMsg",
+                "roomModifyMsg",
+                "pushOrderMsg",
+                "syncKeyMsg",
+                "registerMsg"
+              ]
+            }
+          },
+          "fields": {
+            "Cmd": {
+              "type": "uint32",
+              "id": 1
+            },
+            "Seq": {
+              "type": "uint64",
+              "id": 2
+            },
+            "Version": {
+              "type": "uint32",
+              "id": 3
+            },
+            "heartMsg": {
+              "type": "HeartBeatMessage",
+              "id": 4
+            },
+            "loginMsg": {
+              "type": "LoginMessage",
+              "id": 5
+            },
+            "logoutMsg": {
+              "type": "LogoutMessage",
+              "id": 6
+            },
+            "receiptMsg": {
+              "type": "ReceiptMessage",
+              "id": 7
+            },
+            "orderReceiptMsg": {
+              "type": "OrderReceiptMessage",
+              "id": 8
+            },
+            "retractMsg": {
+              "type": "RetractMessage",
+              "id": 9
+            },
+            "roomMember": {
+              "type": "RoomMember",
+              "id": 10
+            },
+            "room": {
+              "type": "Room",
+              "id": 11
+            },
+            "imMsg": {
+              "type": "IMMessage",
+              "id": 12
+            },
+            "pluginMsg": {
+              "type": "PluginMessage",
+              "id": 13
+            },
+            "orderMsg": {
+              "type": "OrderMessage",
+              "id": 14
+            },
+            "orderSaveMsg": {
+              "type": "OrderSaveMessage",
+              "id": 15
+            },
+            "orderCommand": {
+              "type": "OrderCommand",
+              "id": 16
+            },
+            "relayMsg": {
+              "type": "RelayMessage",
+              "id": 17
+            },
+            "roomMsg": {
+              "type": "RoomMessage",
+              "id": 18
+            },
+            "authTokenMsg": {
+              "type": "AuthTokenMessage",
+              "id": 19
+            },
+            "authStatusMsg": {
+              "type": "AuthStatusMessage",
+              "id": 20
+            },
+            "systemMsg": {
+              "type": "SystemMessage",
+              "id": 21
+            },
+            "appMsg": {
+              "type": "AppMessage",
+              "id": 22
+            },
+            "resultMsg": {
+              "type": "ResultMessage",
+              "id": 23
+            },
+            "ackMsg": {
+              "type": "AckMessage",
+              "id": 24
+            },
+            "transMsg": {
+              "type": "TransMessage",
+              "id": 25
+            },
+            "stateMsg": {
+              "type": "StateMessage",
+              "id": 26
+            },
+            "modifyMsg": {
+              "type": "ModifyMessage",
+              "id": 27
+            },
+            "roomModifyMsg": {
+              "type": "RoomModify",
+              "id": 28
+            },
+            "pushOrderMsg": {
+              "type": "PushOrderMessage",
+              "id": 29
+            },
+            "syncKeyMsg": {
+              "type": "SyncKeyMessage",
+              "id": 30
+            },
+            "registerMsg": {
+              "type": "RegisterMessage",
+              "id": 31
+            }
+          }
+        },
+        "HeartBeatMessage": {
+          "fields": {}
+        },
+        "RegisterMessage": {
+          "fields": {
+            "Addr": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "ReceiptMessage": {
+          "fields": {
+            "Sender": {
+              "type": "string",
+              "id": 1
+            },
+            "Receiver": {
+              "type": "string",
+              "id": 2
+            },
+            "Relay": {
+              "rule": "repeated",
+              "type": "RelayInfo",
+              "id": 7
+            },
+            "MergeContent": {
+              "type": "string",
+              "id": 8
+            },
+            "MsgId": {
+              "type": "uint64",
+              "id": 9
+            },
+            "MsgStatus": {
+              "type": "uint32",
+              "id": 10
+            },
+            "Timestamp": {
+              "type": "uint64",
+              "id": 11
+            },
+            "ServerTimestamp": {
+              "type": "uint64",
+              "id": 12
+            },
+            "UniqueId": {
+              "type": "uint64",
+              "id": 13
+            }
+          }
+        },
+        "OrderReceiptMessage": {
+          "fields": {
+            "Code": {
+              "type": "uint32",
+              "id": 1
+            },
+            "Msg": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "RetractMessage": {
+          "fields": {
+            "Sender": {
+              "type": "string",
+              "id": 1
+            },
+            "Receiver": {
+              "type": "string",
+              "id": 2
+            },
+            "MsgId": {
+              "type": "uint64",
+              "id": 3
+            }
+          }
+        },
+        "RoomMember": {
+          "fields": {
+            "RoomId": {
+              "type": "string",
+              "id": 1
+            },
+            "UserId": {
+              "type": "string",
+              "id": 2
+            },
+            "PlatformId": {
+              "type": "uint32",
+              "id": 3
+            }
+          }
+        },
+        "Room": {
+          "fields": {
+            "RoomId": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "LoginMessage": {
+          "fields": {
+            "UserId": {
+              "type": "string",
+              "id": 1
+            },
+            "PlatformId": {
+              "type": "uint32",
+              "id": 2
+            }
+          }
+        },
+        "LogoutMessage": {
+          "fields": {
+            "UserId": {
+              "type": "string",
+              "id": 1
+            },
+            "PlatformId": {
+              "type": "uint32",
+              "id": 2
+            }
+          }
+        },
+        "IMMessage": {
+          "fields": {
+            "Sender": {
+              "type": "string",
+              "id": 1
+            },
+            "Receiver": {
+              "type": "string",
+              "id": 2
+            },
+            "MsgId": {
+              "type": "uint64",
+              "id": 3
+            },
+            "MsgStatus": {
+              "type": "uint32",
+              "id": 4
+            },
+            "Retract": {
+              "type": "uint32",
+              "id": 5
+            },
+            "RelayTimes": {
+              "type": "uint64",
+              "id": 6
+            },
+            "Timestamp": {
+              "type": "uint64",
+              "id": 7
+            },
+            "Content": {
+              "type": "string",
+              "id": 8
+            },
+            "Flag": {
+              "type": "uint32",
+              "id": 9
+            },
+            "UniqueId": {
+              "type": "uint64",
+              "id": 10
+            },
+            "RefMsg": {
+              "type": "IMMessage",
+              "id": 11
+            }
+          }
+        },
+        "PluginMessage": {
+          "fields": {
+            "Sender": {
+              "type": "string",
+              "id": 1
+            },
+            "Receiver": {
+              "type": "string",
+              "id": 2
+            },
+            "Type": {
+              "type": "uint32",
+              "id": 3
+            },
+            "Command": {
+              "type": "string",
+              "id": 4
+            },
+            "Reply": {
+              "type": "uint32",
+              "id": 5
+            }
+          }
+        },
+        "OrderMessage": {
+          "fields": {
+            "Sender": {
+              "type": "string",
+              "id": 1
+            },
+            "Receiver": {
+              "rule": "repeated",
+              "type": "string",
+              "id": 2
+            },
+            "OrderCommand": {
+              "type": "OrderCommand",
+              "id": 3
+            },
+            "Type": {
+              "type": "uint32",
+              "id": 4
+            }
+          }
+        },
+        "OrderSaveMessage": {
+          "fields": {
+            "SenderUserId": {
+              "type": "string",
+              "id": 1
+            },
+            "Receiver": {
+              "rule": "repeated",
+              "type": "string",
+              "id": 2
+            },
+            "OrderCmd": {
+              "type": "OrderCommand",
+              "id": 3
+            },
+            "Reply": {
+              "type": "uint32",
+              "id": 4
+            }
+          }
+        },
+        "OrderCommand": {
+          "fields": {
+            "Flag": {
+              "type": "uint32",
+              "id": 1
+            },
+            "CallUser": {
+              "rule": "repeated",
+              "type": "string",
+              "id": 2
+            },
+            "Room": {
+              "type": "string",
+              "id": 3
+            },
+            "Group": {
+              "type": "string",
+              "id": 4
+            },
+            "Reply": {
+              "type": "uint32",
+              "id": 5
+            },
+            "Command": {
+              "type": "string",
+              "id": 6
+            }
+          }
+        },
+        "RelayMessage": {
+          "fields": {
+            "Retract": {
+              "type": "uint32",
+              "id": 1
+            },
+            "Type": {
+              "type": "uint32",
+              "id": 2
+            },
+            "Sender": {
+              "type": "string",
+              "id": 3
+            },
+            "MessageByPeer": {
+              "rule": "repeated",
+              "type": "RelayUserInfo",
+              "id": 4
+            },
+            "MessageByGroup": {
+              "rule": "repeated",
+              "type": "RelayGroupInfo",
+              "id": 5
+            },
+            "ReceiverPeer": {
+              "rule": "repeated",
+              "type": "string",
+              "id": 6
+            },
+            "ReceiverGroup": {
+              "rule": "repeated",
+              "type": "string",
+              "id": 7
+            },
+            "Timestamp": {
+              "type": "uint64",
+              "id": 8
+            },
+            "UniqueId": {
+              "type": "uint64",
+              "id": 9
+            }
+          }
+        },
+        "RoomMessage": {
+          "fields": {
+            "Sender": {
+              "type": "string",
+              "id": 1
+            },
+            "Receiver": {
+              "type": "string",
+              "id": 2
+            },
+            "Timestamp": {
+              "type": "uint64",
+              "id": 3
+            },
+            "Content": {
+              "type": "string",
+              "id": 4
+            }
+          }
+        },
+        "AuthTokenMessage": {
+          "fields": {
+            "UserId": {
+              "type": "string",
+              "id": 1
+            },
+            "PlatformId": {
+              "type": "uint32",
+              "id": 2
+            }
+          }
+        },
+        "AuthStatusMessage": {
+          "fields": {
+            "UserId": {
+              "type": "string",
+              "id": 1
+            },
+            "Status": {
+              "type": "uint32",
+              "id": 2
+            }
+          }
+        },
+        "AckMessage": {
+          "fields": {
+            "Seq": {
+              "type": "uint64",
+              "id": 1
+            }
+          }
+        },
+        "SyncKeyMessage": {
+          "fields": {
+            "SyncKey": {
+              "type": "uint64",
+              "id": 1
+            }
+          }
+        },
+        "SystemMessage": {
+          "fields": {
+            "Sender": {
+              "type": "string",
+              "id": 1
+            },
+            "Receiver": {
+              "type": "string",
+              "id": 2
+            },
+            "SystemMsgId": {
+              "type": "uint64",
+              "id": 7
+            },
+            "MsgId": {
+              "type": "uint64",
+              "id": 8
+            },
+            "Timestamp": {
+              "type": "uint64",
+              "id": 9
+            },
+            "Content": {
+              "type": "string",
+              "id": 10
+            }
+          }
+        },
+        "AppMessage": {
+          "fields": {
+            "Sender": {
+              "type": "string",
+              "id": 1
+            },
+            "Receiver": {
+              "type": "string",
+              "id": 2
+            },
+            "PlatformId": {
+              "type": "uint32",
+              "id": 3
+            },
+            "Addr": {
+              "type": "string",
+              "id": 4
+            },
+            "Message": {
+              "type": "Message",
+              "id": 5
+            }
+          }
+        },
+        "ResultMessage": {
+          "fields": {
+            "Code": {
+              "type": "uint32",
+              "id": 1
+            },
+            "Msg": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "TransMessage": {
+          "fields": {
+            "Type": {
+              "type": "uint32",
+              "id": 1
+            },
+            "Sender": {
+              "type": "string",
+              "id": 2
+            },
+            "Receiver": {
+              "type": "string",
+              "id": 3
+            },
+            "Timestamp": {
+              "type": "uint64",
+              "id": 4
+            },
+            "Content": {
+              "type": "string",
+              "id": 5
+            }
+          }
+        },
+        "StateMessage": {
+          "fields": {
+            "RoomId": {
+              "type": "string",
+              "id": 1
+            },
+            "State": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "ModifyMessage": {
+          "fields": {
+            "Type": {
+              "type": "string",
+              "id": 1
+            },
+            "Sender": {
+              "type": "string",
+              "id": 2
+            },
+            "Receiver": {
+              "type": "string",
+              "id": 3
+            },
+            "Key": {
+              "type": "string",
+              "id": 4
+            },
+            "Value": {
+              "type": "string",
+              "id": 5
+            }
+          }
+        },
+        "ModifyType": {
+          "fields": {
+            "Type": {
+              "type": "string",
+              "id": 1
+            },
+            "Key": {
+              "type": "string",
+              "id": 2
+            },
+            "Value": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "RoomModify": {
+          "fields": {
+            "RoomId": {
+              "type": "string",
+              "id": 3
+            },
+            "modify": {
+              "type": "ModifyType",
+              "id": 4
+            }
+          }
+        },
+        "PushOrderMessage": {
+          "fields": {
+            "Sender": {
+              "type": "string",
+              "id": 1
+            },
+            "Receiver": {
+              "type": "string",
+              "id": 2
+            },
+            "Status": {
+              "type": "uint32",
+              "id": 3
+            },
+            "Timestamp": {
+              "type": "uint64",
+              "id": 4
+            },
+            "message": {
+              "type": "Message",
+              "id": 5
+            }
+          }
+        },
+        "RelayUserInfo": {
+          "fields": {
+            "Sender": {
+              "type": "string",
+              "id": 1
+            },
+            "Receiver": {
+              "type": "string",
+              "id": 2
+            },
+            "MsgId": {
+              "type": "uint64",
+              "id": 3
+            },
+            "SenderName": {
+              "type": "string",
+              "id": 4
+            },
+            "SenderAvatar": {
+              "type": "string",
+              "id": 5
+            },
+            "ReceiverName": {
+              "type": "string",
+              "id": 6
+            },
+            "ReceiverAvatar": {
+              "type": "string",
+              "id": 7
+            }
+          }
+        },
+        "RelayGroupInfo": {
+          "fields": {
+            "Sender": {
+              "type": "string",
+              "id": 1
+            },
+            "ReceiverGid": {
+              "type": "string",
+              "id": 2
+            },
+            "MsgId": {
+              "type": "uint64",
+              "id": 3
+            },
+            "SenderName": {
+              "type": "string",
+              "id": 4
+            },
+            "SenderAvatar": {
+              "type": "string",
+              "id": 5
+            }
+          }
+        },
+        "RelayInfo": {
+          "fields": {
+            "OldReceiver": {
+              "type": "string",
+              "id": 1
+            },
+            "OldMsgId": {
+              "type": "uint64",
+              "id": 2
+            },
+            "NewReceiver": {
+              "type": "string",
+              "id": 3
+            },
+            "NewMsgId": {
+              "type": "uint64",
+              "id": 4
+            },
+            "NewReceiverType": {
+              "type": "uint32",
+              "id": 5
+            }
+          }
+        }
+      }
+    }
+  }
+}
